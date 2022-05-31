@@ -23,6 +23,8 @@
 #endif
 
 /* MAXRESERVED = the number of reserved words */
+
+//Se agregaron los 2 tokens creados anteriormente, por lo tanto la varibale "MAXRESERVERD" quedó en 10 y no en 8.
 #define MAXRESERVED 10
 
 typedef enum 
@@ -47,6 +49,7 @@ extern int lineno; /* source line number for listing */
 /**************************************************/
 
 typedef enum {StmtK,ExpK} NodeKind;
+//Se agregó el token WhileK
 typedef enum {IfK,RepeatK,AssignK,ReadK,WriteK,WhileK} StmtKind;
 typedef enum {OpK,ConstK,IdK} ExpKind;
 
