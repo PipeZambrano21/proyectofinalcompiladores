@@ -17,6 +17,7 @@ static TreeNode * stmt_sequence(void);
 static TreeNode * statement(void);
 static TreeNode * if_stmt(void);
 static TreeNode * repeat_stmt(void);
+//Se agregó el método "while_stmt"
 static TreeNode * while_stmt(void);
 static TreeNode * assign_stmt(void);
 static TreeNode * read_stmt(void);
@@ -41,6 +42,7 @@ static void match(TokenType expected)
   }
 }
 
+//Se le añade una condición al árbol.
 TreeNode * stmt_sequence(void)
 { TreeNode * t = statement();
   TreeNode * p = t;
@@ -61,6 +63,7 @@ TreeNode * stmt_sequence(void)
   return t;
 }
 
+//Se valida que el token cree otro nodo cuando sea While
 TreeNode * statement(void)
 { TreeNode * t = NULL;
   switch (token) {
@@ -101,6 +104,8 @@ TreeNode * repeat_stmt(void)
   return t;
 }
 
+
+//Se inicia el método con un While y se termina hasta cuando encuentre el ENDWHILE.
 TreeNode * while_stmt(void)
 { TreeNode * t = newStmtNode(WhileK);
   match(WHILE);
