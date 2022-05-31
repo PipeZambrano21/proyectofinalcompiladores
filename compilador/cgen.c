@@ -22,6 +22,7 @@ static int tmpOffset = 0;
 static void cGen (TreeNode * tree);
 
 /* Procedure genStmt generates code at a statement node */
+
 static void genStmt( TreeNode * tree)
 { TreeNode * p1, * p2, * p3;
   int savedLoc1,savedLoc2,currentLoc;
@@ -68,6 +69,7 @@ static void genStmt( TreeNode * tree)
          if (TraceCode)  emitComment("<- repeat") ;
          break; /* repeat */
 
+//Agregar el token While que se creó anteriormente
       case WhileK:
          if (TraceCode) emitComment("-> while") ;
          p1 = tree->child[0] ;
