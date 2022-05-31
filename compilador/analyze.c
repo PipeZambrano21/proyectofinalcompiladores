@@ -141,6 +141,7 @@ static void checkNode(TreeNode * t)
           if (t->child[1]->type == Integer)
             typeError(t->child[1],"repeat test is not Boolean");
           break;
+// Case creado para verificar que el token ingresado es un While
         case WhileK:
           if (t->child[0]->type == Integer)
             typeError(t->child[0], "while test is not Boolean");
