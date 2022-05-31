@@ -12,6 +12,8 @@
 /* Procedure printToken prints a token 
  * and its lexeme to the listing file
  */
+
+//Se adicionan los token WHILE y ENDWHILE
 void printToken( TokenType token, const char* tokenString )
 { switch (token)
   { case IF:
@@ -126,6 +128,8 @@ static void printSpaces(void)
 /* procedure printTree prints a syntax tree to the 
  * listing file using indentation to indicate subtrees
  */
+
+//Se agregan los case necesarios de WhileK
 void printTree( TreeNode * tree )
 { int i;
   INDENT;
