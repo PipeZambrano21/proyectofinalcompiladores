@@ -52,6 +52,7 @@ static void ungetNextChar(void)
 { if (!EOF_flag) linepos-- ;}
 
 /* lookup table of reserved words */
+//Se adicionan las palabras WHILE y ENDWHILE
 static struct
     { char* str;
       TokenType tok;
